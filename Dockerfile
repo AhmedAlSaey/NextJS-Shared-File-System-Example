@@ -16,9 +16,6 @@ COPY .env /.env
 COPY .env.local /.env.local
 
 RUN yarn build
-COPY start.sh start.sh
-
-RUN mv ./.next/server/pages/ ./.pages-temp/
 
 ENV PORT 80
 
