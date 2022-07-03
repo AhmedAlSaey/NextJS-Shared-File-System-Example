@@ -2,23 +2,24 @@ version: '3'
 
 services:
   container1:
-    image: nextjs-image
+    image: nextjs-image-production
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.production
     ports:
       - 3000:80
     volumes:
       - test-vol:/app/.next/server/pages/
   container2:
-    image: nextjs-image
+    image: nextjs-image-production
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.production
     ports:
       - 3001:80
     volumes:
       - test-vol:/app/.next/server/pages/
+
 volumes:
   test-vol:
     
